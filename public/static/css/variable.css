@@ -1,0 +1,29 @@
+/* Background Colors */
+html {
+    --bg-clr-1: #1D2833;
+    --bg-clr-2: #1F2A32;
+    --bg-clr-3: #171E27;
+    --bg-clr-4: #26333D;
+    --bg-clr-5: #03162a;
+    --bg-clr-6: #0E1218;
+    --bg-clr-7: #EC3728;
+    --bg-clr-8: #FAF8F6;
+    --bg-clr-9: rgba(255, 255, 255, .1);
+    --bg-clr-10: rgba(255, 255, 255, .225);
+    --bg-clr-11: rgba(255, 255, 255, .045);
+    --bg-clr-12: rgba(100, 100, 111, .2);
+    --bg-clr-13: rgba(0, 0, 0, .065);
+    --bg-clr-14: rgba(0, 0, 0, .1);
+    --bg-clr-15: #767A83;
+    --bg-clr-16: #171F29;
+    --bg-clr-17: #48535C;
+}
+
+/* Text Colors */
+html {
+    --txt-clr-1: #F9FBF9;
+    --txt-clr-2: #AEB6BA;
+    --txt-clr-3: #EC3728;
+    --txt-clr-4: #8C9097;
+    --txt-clr-5: #000000;
+}

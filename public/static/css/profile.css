@@ -1,0 +1,24 @@
+.prfl {
+    padding-top: 28px !important;
+    padding-bottom: 12px !important;
+}
+
+.prfl > .dtls {
+    gap: 38px;
+}
+
+.prfl > .dtls > .infs-bg > .infs > .nm {
+    margin: 7.65px 0;
+}
+
+.prfl > .dtls > .infs-bg > .infs > .nm > .txt {
+    font-weight: 500;
+}
+
+.prfl > .dtls > .infs-bg > .infs > .addtnl {
+    margin: 5.25px 0;
+}
+
+.prfl > .dtls > .infs-bg > .infs > .addtnl > .txt {
+    color: var(--txt-clr-2);
+}

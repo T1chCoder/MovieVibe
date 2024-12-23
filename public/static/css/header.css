@@ -1,0 +1,86 @@
+/* Style */
+header {
+    background-color: var(--bg-clr-2);
+}
+
+/* Size */
+header {
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
+    z-index: 2;
+}
+
+/* Logo */
+header > .lg > a > .txt {
+    color: var(--txt-clr-1);
+    font-weight: 600;
+}
+
+/* Search */
+header > .srch {
+    max-width: 464px;
+}
+
+header > .srch > .frm > .bd > input {
+    padding: 0 12px 1px 12px;
+    color: var(--txt-clr-5);
+    background-color: var(--bg-clr-8);
+    font-size: 15px !important;
+}
+
+header > .srch > .frm > .bd > input::placeholder {
+    color: var(--txt-clr-4);
+}
+
+header > .srch > .frm > .btn > button {
+    padding: 9px 10px 11px 10px;
+    background-color: var(--bg-clr-7);
+}
+
+header > .srch > .hlp {
+    background-color: var(--bg-clr-8);
+    top: calc(100% + 6px);
+    z-index: 9999;
+    padding: 12px 0 8px 0;
+}
+
+header > .srch > .hlp > ul > li > button {
+    cursor: default;
+    padding: 4px 12px;
+}
+
+header > .srch > .hlp > ul > li > button > .dtls > .tlt > .txt {
+    color: var(--txt-clr-5);
+}
+
+header > .srch > .hlp > ul > li > button > .dtls > .tlt > .txt,
+header > .srch > .hlp > ul > li > button > .btn > .rmv > .txt {
+    font-weight: 500;
+}
+
+header > .srch > .hlp > ul > li > button > .dtls {
+    gap: 8px;
+}
+
+header > .srch > .hlp > ul > li > button > .btn > .rmv {
+    padding: 4px;
+    margin: 0 -4px 0 0;
+}
+
+header > .srch > .hlp > ul > li > button > .btn > .rmv > .txt {
+    color: var(--bg-clr-7);
+}
+
+header > .srch > .hlp > ul > li > button > .btn > .rmv:hover .txt {
+    text-decoration: underline;
+    text-underline-offset: 1.5px;
+}
+
+header > .srch > .hlp > ul > li > button:hover {
+    background-color: var(--bg-clr-14);
+}
+
+/* Buttons */
+header > .btns > .btn > a {
+    padding: 12px 18px;
+}

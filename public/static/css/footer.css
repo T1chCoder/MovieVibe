@@ -1,0 +1,40 @@
+/* Style */
+footer > .btm,
+footer > .tp > button {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+}
+
+/* Top */
+footer > .tp > button {
+    background-color: var(--bg-clr-4);
+}
+
+/* Center */
+footer > .ctr {
+    padding-top: 38px !important;
+    padding-bottom: 38px !important;
+}
+
+footer > .ctr ul {
+    gap: 10px;
+}
+
+footer > .ctr ul > li > a:hover text {
+    text-decoration: underline;
+    text-decoration-color: var(--txt-clr-1);
+    text-underline-offset: 2.5px;
+}
+
+footer > .ctr ul > li > a text {
+    color: var(--txt-clr-2);
+}
+
+/* Bottom */
+footer > .btm {
+    background-color: var(--bg-clr-6);
+}
+
+footer > .btm > small {
+    color: var(--txt-clr-4);
+}

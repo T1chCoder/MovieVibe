@@ -1,0 +1,109 @@
+.cnts {
+    padding-top: 24px !important;
+    padding-bottom: 24px !important;
+}
+
+.cnts.cnts-mn {
+    padding: 0 !important;
+}
+
+.cnts > ul,
+.cnts > ul {
+    display: grid;
+}
+
+.cnts > ul {
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 24px;
+    grid-row-gap: 24px;
+}
+
+.cnts.cnts-mn > ul {
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 12px;
+    grid-row-gap: 16px;
+}
+
+.cnts > ul > li > .cnt::before {
+    content: "";
+    --cnt-bfr-sz: 5.5px;
+    position: absolute;
+    top: calc(0px - var(--cnt-bfr-sz));
+    left: calc(0px - var(--cnt-bfr-sz));
+    z-index: -2;
+    width: calc(100% + var(--cnt-bfr-sz) * 2);
+    height: calc(100% + var(--cnt-bfr-sz) * 2);
+    border-radius: 4px;
+}
+
+.cnts > ul > li > .cnt::after {
+    --cnt-bfr-sz: 5.5px;
+}
+
+.cnts > ul > li > .cnt::after {
+    content: "";
+    position: absolute;
+    top: calc(0px - var(--cnt-bfr-sz));
+    left: calc(0px - var(--cnt-bfr-sz));
+    z-index: -1;
+    width: calc(100% + var(--cnt-bfr-sz) * 2);
+    height: calc(100% + var(--cnt-bfr-sz) * 2);
+    border-radius: 4px;
+}
+
+.cnts > ul > li > .cnt:hover:hover::before,
+.cnts > ul > li > .cnt:hover:active::before {
+    background-color: var(--bg-clr-1);
+}
+
+.cnts > ul > li > .cnt:hover::after {
+    box-shadow: var(--bg-clr-12) 0px 7px 29px 0px;
+}
+
+.cnts > ul > li > .cnt:active::after {
+    background-color: var(--bg-clr-11);
+}
+
+.cnts > ul > li > .cnt:hover {
+    transform: scale(1.005);
+}
+
+.cnts > ul > li > .cnt:active {
+    transform: scale(1.0015);
+}
+
+.cnts > ul > li > .cnt > .dtls {
+    padding: 10px 0 0 0;
+}
+
+.cnts.cnts-mn > ul > li > .cnt > .dtls {
+    padding: 7px 0 0 0;
+}
+
+.cnts > ul > li > .cnt > .dtls > .nm {
+    padding: 8px 0;
+}
+
+.cnts.cnts-mn > ul > li > .cnt > .dtls > .nm {
+    padding: 3px 0;
+}
+
+.cnts > ul > li > .cnt > .dtls > .dtl {
+    padding: 4px 0;
+}
+
+.cnts.cnts-mn > ul > li > .cnt > .dtls > .dtl {
+    padding: 3px 0;
+}
+
+.cnts > ul > li > .cnt > .dtls > .dtl > .txt {
+    color: var(--txt-clr-2);
+}
+
+.cnts > ul > li > .cnt > .pstr > span > img {
+    border-radius: 4px;
+}
+
+.cnts > ul > li > .cnt > .pstr {
+    aspect-ratio: 27 / 40;
+}

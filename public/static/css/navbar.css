@@ -1,0 +1,24 @@
+/* Style */
+nav {
+    background-color: var(--bg-clr-3);
+}
+
+/* Main Button */
+nav > .ctlg > button {
+    background-color: var(--bg-clr-7);
+    padding: 8px 12px;
+}
+
+/* Buttons */
+nav > .btns {
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+nav > .btns.lmtd {
+    height: 40px;
+}
+
+nav > .btns > .btn > a {
+    padding: 12px 20px;
+}

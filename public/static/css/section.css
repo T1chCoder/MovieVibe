@@ -1,0 +1,30 @@
+.sctns-bg {
+    padding-top: 12px !important;
+    padding-bottom: 14px !important;
+}
+
+.sctns-bg > .sctns {
+    border-bottom: 2px solid var(--bg-clr-17);
+}
+
+.sctns-bg > .sctns > .btns > .btn-bg > .btn {
+    padding: 22px 18px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.sctns-bg > .sctns > .btns > .btn-bg > .btn > .txt {
+    font-weight: 500;
+}
+
+.sctns-bg > .sctns > .btns > .btn-bg > .btn.actv > .txt {
+    color: var(--txt-clr-3);
+}
+
+.sctns-bg > .sctns > .btns > .btn-bg > .btn {
+    border-bottom: 2px solid transparent;
+}
+
+.sctns-bg > .sctns > .btns > .btn-bg > .btn.actv {
+    border-color: var(--bg-clr-7);
+}

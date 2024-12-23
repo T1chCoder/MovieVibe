@@ -1,0 +1,167 @@
+.wdth-cvr {
+    width: 100%;
+}
+
+.hght-cvr {
+    height: 100%;
+}
+
+.flx-cntr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flx-lft {
+    justify-content: flex-start;
+}
+
+.flx-rght {
+    justify-content: flex-end;
+}
+
+.flx-tp {
+    align-items: flex-start;
+}
+
+.flx-btm {
+    align-items: flex-end;
+}
+
+.flx-drt-clmn {
+    display: flex;
+    flex-direction: column;
+}
+
+.bdr-rds-cvr {
+    border-radius: 10000px;
+}
+
+.cvr {
+    width: 100%;
+    height: 100%;
+}
+
+.flx-cvr {
+    display: flex;
+    flex: 1;
+}
+
+.ptn-fxd {
+    position: fixed;
+}
+
+.ptn-stck {
+    position: sticky;
+}
+
+.ptn-rltv {
+    position: relative;
+}
+
+.ptn-abslt {
+    position: absolute;
+}
+
+.flx-spc-btwn {
+    display: flex;
+    justify-content: space-between;
+}
+
+.fgr {
+    width: var(--fgr-sz);
+    height: var(--fgr-sz);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pdng-tp-cvr {
+    padding-top: 100%;
+}
+
+.tp-cvr {
+    top: 0;
+}
+
+.lft-cvr {
+    left: 0;
+}
+
+.rght-cvr {
+    right: 0;
+}
+
+.btm-cvr {
+    bottom: 0;
+}
+
+.ovrfl-hdn {
+    overflow: hidden;
+}
+
+.ovrfl-at {
+    overflow: auto;
+}
+
+.ovrfl-scrl {
+    overflow: scroll;
+}
+
+.ovrfl-vsbl {
+    overflow: visible;
+}
+
+.bdr-bx {
+    box-sizing: border-box;
+}
+
+.txt-ln {
+    display: -webkit-box;
+    -webkit-line-clamp: var(--txt-ln-nbr);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+
+.hvr-1:hover {
+    background-color: var(--bg-clr-9);
+}
+
+.hvr-2:hover {
+    position: relative;
+}
+
+.hvr-2:hover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: var(--bg-clr-13);
+}
+
+.actv-1:active {
+    background-color: var(--bg-clr-10);
+}
+
+.actv-2:active {
+    opacity: .825;
+}
+
+.actv-3:active {
+    background-color: var(--bg-clr-9);
+}
+
+.bdr-rds-1 {
+    border-radius: 4px;
+}
+
+.wrp {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 40px;
+}

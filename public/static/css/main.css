@@ -1,0 +1,122 @@
+main > .pgs {
+    padding-top: 24px !important;
+    padding-bottom: 24px !important;
+}
+
+main > .pgs > .bd {
+    box-shadow: 0 0 0 2px var(--bg-clr-7);
+}
+
+main > .pgs > .bd .pg.actv {
+    background-color: var(--bg-clr-7);
+}
+
+main > .hdr {
+    padding-top: 28px !important;
+    padding-bottom: 2px !important;
+}
+
+main > .hdr > .tlt > .txt {
+    font-weight: 500;
+}
+
+main > .fltr {
+    padding-top: 20px !important;
+    padding-bottom: 2px !important;
+}
+
+main > .fltr .btn {
+    padding: 8px 12px;
+    background-color: var(--bg-clr-16);
+}
+
+main > .fltr .btn.actv {
+    background-color: var(--bg-clr-7);
+}
+
+main > .fltr > .btns {
+    gap: 6px;
+}
+
+main > .url-bg {
+    padding-top: 18px !important;
+    padding-bottom: 6px !important;
+}
+
+main > .url-bg > .url > .nm .txt {
+    color: var(--txt-clr-2);
+    user-select: none;
+}
+
+main > .url-bg > .url > .nm .lnk {
+    font-size: 14px;
+}
+
+main > .url-bg > .url > .nm .lnk.actv:hover {
+    text-decoration: underline;
+    text-underline-offset: 1.5px;
+    text-decoration-color: var(--txt-clr-2);
+}
+
+main > .bd {
+    padding-top: 12px !important;
+    padding-bottom: 24px !important;
+}
+
+main > .bd > .rght-bg > .rght {
+    width: 326px; 
+    margin: 0 0 0 16px;
+}
+
+main > .bd > .lft-bg > .lft > .pstr-bg {
+    padding-top: 44%;
+}
+
+main > .bd > .lft-bg > .lft > .dtls-bg > .dtls > .rght-bg {
+    margin: 0 0 0 16px;
+}
+
+main > .bd > .lft-bg > .lft > .dtls-bg > .dtls {
+    padding: 16px 0 22px 0;
+}
+
+main > .bd > .lft-bg > .lft > .dtls-bg > .dtls > .lft-bg > .lft > .pstr {
+    width: 152px;
+    aspect-ratio: 27 / 40;
+}
+
+main > .bd > .lft-bg > .lft > .dtls-bg > .dtls > .rght-bg > .rght > .nm {
+    margin: 4px 0 6px 0;
+}
+
+main > .bd > .lft-bg > .lft > .dtls-bg > .dtls > .rght-bg > .rght > .dtl {
+    margin: 2px 0;
+}
+
+main > .bd > .lft-bg > .lft > .dtls-bg > .dtls > .rght-bg > .rght > .dscrptn {
+    margin: 3.5px 0 4.5px 0;
+}
+
+main > .bd > .lft-bg > .lft > .dtls-bg > .dtls > .rght-bg > .rght > .dtl > .txt,
+main > .bd > .lft-bg > .lft > .dtls-bg > .dtls > .rght-bg > .rght > .dscrptn > .txt,
+main > .bd > .lft-bg > .lft > .dtls-bg > .dtls > .rght-bg > .rght > .dtls-mr > .dtl .txt {
+    color: var(--txt-clr-2);
+}
+
+main > .bd > .lft-bg > .lft > .dtls-bg > .dtls > .rght-bg > .rght > .dscrptn > .txt,
+main > .bd > .lft-bg > .lft > .dtls-bg > .dtls > .rght-bg > .rght > .dtls-mr > .dtl .txt {
+    line-height: 1.15;
+}
+
+main > .bd > .lft-bg > .lft > .dtls-bg > .dtls > .rght-bg > .rght > .dtls-mr {
+    gap: 3px;
+    margin: 2px 0;
+}
+
+main > .bd > .lft-bg > .lft > .dtls-bg > .dtls > .rght-bg > .rght > .dtls-mr > .dtl {
+    gap: 12px;
+}
+
+main > .bd > .lft-bg > .lft > .dtls-bg > .dtls > .rght-bg > .rght > .dtls-mr > .dtl > .tlt {
+    width: 88px;
+}
