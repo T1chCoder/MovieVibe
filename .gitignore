@@ -1,0 +1,49 @@
+# Node.js
+node_modules/
+
+# Logs
+logs/
+*.log
+logs/*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Testing
+coverage/
+
+# Build output
+dist/
+build/
+
+# Temporary files
+*.tmp
+*.temp
+
+# Cache
+.cache/
+.nyc_output/
+.next/
+.sass-cache/
+.vite/
+
+# IDE/Editor settings
+.idea/
+.vscode/
+*.swp
+*.swo
+*.sublime-workspace
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Miscellaneous
+.pnpm-debug.log
+.eslintcache
+stylelint.cache
