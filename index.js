@@ -6,7 +6,7 @@ const dotenv = require('./config/env');
 
 const userRoute = require('./routes/user');
 const contentRoute = require('./routes/content');
-const categoryRoute = require('./routes/category');
+const genreRoute = require('./routes/genre');
 const commentRoute = require('./routes/comment');
 const reviewRoute = require('./routes/review');
 const profileRoute = require('./routes/profile');
@@ -28,7 +28,7 @@ app.use(cookieParser());
 
 app.use('/api/users/', userRoute);
 app.use('/api/contents/', contentRoute);
-app.use('/api/categories/', categoryRoute);
+app.use('/api/genres/', genreRoute);
 app.use('/api/comments/', commentRoute);
 app.use('/api/reviews/', reviewRoute);
 app.use('/api/profiles/', profileRoute);
@@ -40,7 +40,7 @@ app.use('/log-out/', authenticated, logoutRoute);
 
 db.connect((err) => {
     if (err) {
-        console.error('Failed connecting to the database');
+        console.error('Failed connecting to the database' + err);
         return;
     }
     console.log('Connected to MySQL database.');

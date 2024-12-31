@@ -1,7 +1,8 @@
 const mysql = require('mysql2');
 const dotenv = require('dotenv');
-const categoryQuery = require('./tables/category');
-const commentQuery = require('./tables/comment');
+const genreQuery = require('./tables/genre');
+const commentQuery = require('./tables/comment/main');
+const commentLikeQuery = require('./tables/comment/like');
 const contentQuery = require('./tables/content');
 const profileQuery = require('./tables/profile');
 const reviewQuery = require('./tables/review');
@@ -21,6 +22,7 @@ const migrationName = `${formattedDate}-create-tables`;
 
 const dbConfig = {
   host: process.env.DB_HOST,
+  port: process.env.DB_PORT,
   user: process.env.DB_USER,
   password: process.env.DB_PASSWORD,
   database: process.env.DB_NAME,
@@ -51,8 +53,9 @@ const runMigration = async () => {
 
     await connection.execute('SET FOREIGN_KEY_CHECKS = 0;');
 
-    await connection.execute('DROP TABLE IF EXISTS categories;');
+    await connection.execute('DROP TABLE IF EXISTS genres;');
     await connection.execute('DROP TABLE IF EXISTS comments;');
+    await connection.execute('DROP TABLE IF EXISTS comment_likes;');
     await connection.execute('DROP TABLE IF EXISTS contents;');
     await connection.execute('DROP TABLE IF EXISTS profiles;');
     await connection.execute('DROP TABLE IF EXISTS reviews;');
@@ -62,9 +65,10 @@ const runMigration = async () => {
     await connection.execute('SET FOREIGN_KEY_CHECKS = 1;');
 
     await connection.execute(userQuery);
-    await connection.execute(categoryQuery);
+    await connection.execute(genreQuery);
     await connection.execute(contentQuery);
     await connection.execute(commentQuery);
+    await connection.execute(commentLikeQuery);
     await connection.execute(profileQuery);
     await connection.execute(reviewQuery);
     await connection.execute(videoQuery);

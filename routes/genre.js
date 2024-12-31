@@ -1,15 +1,15 @@
 const express = require('express');
 const router = express.Router();
 const dotenv = require('../config/env');
-const Category = require('../models/category');
+const Genre = require('../models/genre');
 
 router.post('/', async (req, res) => {
   const { title } = req.body;
 
   try {
-    const categoryUUID = await Category.create(title);
+    const genreUUID = await Genre.create(title);
     
-    res.status(201).json({ uuid: categoryUUID });
+    res.status(201).json({ uuid: genreUUID });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
@@ -19,13 +19,13 @@ router.get('/:uuid', async (req, res) => {
   const { uuid } = req.params;
   
   try {
-    const category = await Category.findByUUID(uuid);
+    const genre = await Genre.findByUUID(uuid);
     
-    if (!category) {
-      return res.status(404).json({ error: 'Category not found' });
+    if (!genre) {
+      return res.status(404).json({ error: 'Genre not found' });
     }
     
-    res.json(category);
+    res.json(genre);
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
@@ -33,8 +33,8 @@ router.get('/:uuid', async (req, res) => {
 
 router.get('/', async (req, res) => {
   try {
-    const categories = await Category.findAll();
-    res.json(categories);
+    const genres = await Genre.findAll();
+    res.json(genres);
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
@@ -45,13 +45,13 @@ router.put('/:uuid', async (req, res) => {
   const { title } = req.body;
 
   try {
-    const affectedRows = await Category.update(uuid, title);
+    const affectedRows = await Genre.update(uuid, title);
 
     if (affectedRows === 0) {
-      return res.status(404).json({ error: 'Category not found' });
+      return res.status(404).json({ error: 'Genre not found' });
     }
 
-    res.json({ message: 'Category updated successfully' });
+    res.json({ message: 'Genre updated successfully' });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
@@ -61,10 +61,10 @@ router.delete('/:uuid', async (req, res) => {
   const { uuid } = req.params;
 
   try {
-    const affectedRows = await Category.delete(uuid);
+    const affectedRows = await Genre.delete(uuid);
 
     if (affectedRows === 0) {
-      return res.status(404).json({ error: 'Category not found' });
+      return res.status(404).json({ error: 'Genre not found' });
     }
 
     res.cookie('token', '', {
@@ -73,7 +73,7 @@ router.delete('/:uuid', async (req, res) => {
       maxAge: 0,
     });
 
-    res.json({ message: 'Category deleted successfully' });
+    res.json({ message: 'Genre deleted successfully' });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }

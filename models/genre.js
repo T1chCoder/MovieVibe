@@ -1,9 +1,9 @@
 const bcrypt = require('bcrypt');
 const db = require('../config/database');
 
-const Category = {
+const Genre = {
   create: async (title) => {
-    const query = `INSERT INTO categories (title) VALUES (?)`;
+    const query = `INSERT INTO genres (title) VALUES (?)`;
 
     return new Promise((resolve, reject) => {
       db.query(query, [title], (err, results) => {
@@ -15,7 +15,7 @@ const Category = {
 
   findByUUID: (uuid) => {
     return new Promise((resolve, reject) => {
-      const query = 'SELECT * FROM categories WHERE uuid = ?';
+      const query = 'SELECT * FROM genres WHERE uuid = ?';
       db.query(query, [uuid], (err, results) => {
         if (err) return reject(err);
         if (results.length === 0) return resolve(null);
@@ -25,7 +25,7 @@ const Category = {
   },
 
   findAll: async () => {
-    const query = 'SELECT * FROM categories';
+    const query = 'SELECT * FROM genres';
     return new Promise((resolve, reject) => {
       db.query(query, (err, results) => {
         if (err) return reject(err);
@@ -35,7 +35,7 @@ const Category = {
   },
 
   update: async (uuid, title) => {
-    const query = 'UPDATE categories SET title = ?, WHERE uuid = ?';
+    const query = 'UPDATE genres SET title = ?, WHERE uuid = ?';
 
     return new Promise((resolve, reject) => {
       db.query(query, [title, uuid], (err, results) => {
@@ -46,7 +46,7 @@ const Category = {
   },
 
   delete: async (uuid) => {
-    const query = 'DELETE FROM categories WHERE uuid = ?';
+    const query = 'DELETE FROM genres WHERE uuid = ?';
     return new Promise((resolve, reject) => {
       db.query(query, [uuid], (err, results) => {
         if (err) return reject(err);
@@ -56,4 +56,4 @@ const Category = {
   },
 };
 
-module.exports = Category;
+module.exports = Genre;

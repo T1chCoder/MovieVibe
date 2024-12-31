@@ -1,5 +1,5 @@
 const createCategoryTableQuery = `
-CREATE TABLE IF NOT EXISTS categories (
+CREATE TABLE IF NOT EXISTS genres (
     -- ID's
     id INT AUTO_INCREMENT PRIMARY KEY,
     uuid CHAR(36) DEFAULT (UUID()) UNIQUE NOT NULL,
