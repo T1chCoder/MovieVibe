@@ -8,7 +8,7 @@ const Desktop = ({ contents, min }) => {
                 <ul className="wdth-cvr">
                     {contents && contents.length > 0 ? (
                         contents.map((content) => (
-                            <li key={content.uuid} className="wdth-cvr flx-cntr">
+                            <li key={`content-min-${content.uuid}`} className="wdth-cvr flx-cntr">
                                 <ContentComponent content={content} min={min} />
                             </li>
                         ))
@@ -25,7 +25,7 @@ const Desktop = ({ contents, min }) => {
                 <ul className="wdth-cvr">
                     {contents && contents.length > 0 ? (
                         contents.map((content) => (
-                            <li key={content.uuid} className="wdth-cvr flx-cntr">
+                            <li key={`content-${content.uuid}`} className="wdth-cvr flx-cntr">
                                 <ContentComponent content={content} />
                             </li>
                         ))

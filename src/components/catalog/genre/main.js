@@ -1,32 +1,24 @@
 import React, { useState, useEffect } from 'react';
-import CommentComponent from "./main"
 
-const Desktop = ({ comments }) => (
-    <div lass="cmnts wdth-cvr flx-cntr">
-        <ul className="lst wdth-cvr flx-drt-clmn">
-            {comments && comments.length > 0 ? (
-                comments.map((comment) => (
-                    <li key={`comment-${comment.uuid}`} className="elmnt wdth-cvr flx-cntr">
-                        <CommentComponent comment={comment} />
-                    </li>
-                ))
-            ) : (
-                <h1>Not found</h1>
-            )}
-        </ul>
+const Desktop = ({text, url}) => (
+    <div className="btn flx-cntr">
+        <a href={url} className="hvr-1 actv-1 flx-cntr">
+            <text>{text}</text>
+        </a>
     </div>
-)
+);
 
-const Tablet = ({ comments }) => (
+const Tablet = ({text, url}) => (
     <div></div>
 )
 
-const Mobile = ({ comments }) => (
+const Mobile = ({text, url}) => (
     <div></div>
 )
 
-const Content = ({ comments }) => {
+const Content = ({genre}) => {
     const [screenSize, setScreenSize] = useState('mobile');
+    const url = `/genre/${genre.uuid}`;
 
     useEffect(() => {
         const handleResize = () => {
@@ -48,11 +40,11 @@ const Content = ({ comments }) => {
     }, []);
 
     if (screenSize === 'mobile') {
-        return <Mobile comments={comments} />;
+        return <Mobile text={genre.title} url={url} />;
     } else if (screenSize === 'tablet') {
-        return <Tablet comments={comments} />;
+        return <Tablet text={genre.title} url={url} />;
     } else {
-        return <Desktop comments={comments} />;
+        return <Desktop text={genre.title} url={url} />;
     }
 };
 

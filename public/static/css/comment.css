@@ -14,33 +14,33 @@
     padding: 9px 0 8px 0;
 }
 
-.cmnts-bg > .cmnts > .lst > .elmnt > .cmnt-bg > .cmnt,
+.cmnt-bg > .cmnt,
 .cmnts-bg > .pst-bg > .pst {
     gap: 16px;
 }
 
-.cmnts-bg > .cmnts > .lst > .elmnt > .cmnt-bg > .cmnt > .rght-bg > .rght > .nm {
-    margin: 2px 0;
+.cmnt-bg > .cmnt > .rght-bg > .rght > .nm {
+    margin: 2px 0;  
 }
 
-.cmnts-bg > .cmnts > .lst > .elmnt > .cmnt-bg > .cmnt > .rght-bg > .rght > .mnd {
+.cmnt-bg > .cmnt > .rght-bg > .rght > .mnd {
     margin: 4px 0 1.8px 0;
 }
 
-.cmnts-bg > .cmnts > .lst > .elmnt > .cmnt-bg > .cmnt > .rght-bg > .rght > .mnd > .txt {
+.cmnt-bg > .cmnt > .rght-bg > .rght > .mnd > .txt {
     line-height: 1.3;
 }
 
-.cmnts-bg > .cmnts > .lst > .elmnt > .cmnt-bg > .cmnt > .rght-bg > .rght > .btns-bg {
+.cmnt-bg > .cmnt > .rght-bg > .rght > .btns-bg {
     margin: 0 0 2px 0;
 }
 
-.cmnts-bg > .cmnts > .lst > .elmnt > .cmnt-bg > .cmnt > .rght-bg > .rght > .btns-bg > .btns {
+.cmnt-bg > .cmnt > .rght-bg > .rght > .btns-bg > .btns {
     gap: 4px;
     margin: 0 0 0 -4px;
 }
 
-.cmnts-bg > .cmnts > .lst > .elmnt > .cmnt-bg > .cmnt > .rght-bg > .rght > .btns-bg > .btns > .btn-bg > .btn {
+.cmnt-bg > .cmnt > .rght-bg > .rght > .btns-bg > .btns > .btn-bg > .btn {
     padding: 4px;
 }
 

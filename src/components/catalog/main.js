@@ -1,31 +1,22 @@
 import React, { useState, useEffect } from 'react';
-import CommentComponent from "./main"
 
-const Desktop = ({ comments }) => (
-    <div lass="cmnts wdth-cvr flx-cntr">
-        <ul className="lst wdth-cvr flx-drt-clmn">
-            {comments && comments.length > 0 ? (
-                comments.map((comment) => (
-                    <li key={`comment-${comment.uuid}`} className="elmnt wdth-cvr flx-cntr">
-                        <CommentComponent comment={comment} />
-                    </li>
-                ))
-            ) : (
-                <h1>Not found</h1>
-            )}
-        </ul>
+const Desktop = () => (
+    <div className="ctlg flx-cntr">
+        <button type="button" className="hvr-2 actv-2 bdr-rds-1 flx-cntr">
+            <text>Catalog</text>
+        </button>
     </div>
-)
+);
 
-const Tablet = ({ comments }) => (
+const Tablet = () => (
     <div></div>
 )
 
-const Mobile = ({ comments }) => (
+const Mobile = () => (
     <div></div>
 )
 
-const Content = ({ comments }) => {
+const Content = () => {
     const [screenSize, setScreenSize] = useState('mobile');
 
     useEffect(() => {
@@ -48,11 +39,11 @@ const Content = ({ comments }) => {
     }, []);
 
     if (screenSize === 'mobile') {
-        return <Mobile comments={comments} />;
+        return <Mobile />;
     } else if (screenSize === 'tablet') {
-        return <Tablet comments={comments} />;
+        return <Tablet />;
     } else {
-        return <Desktop comments={comments} />;
+        return <Desktop />;
     }
 };
 

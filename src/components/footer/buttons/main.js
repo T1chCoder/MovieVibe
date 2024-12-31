@@ -1,24 +1,25 @@
 import React, { useState, useEffect } from 'react';
 
-const Desktop = ({ count }) => (
-    <div className="hdr-bg wdth-cvr flx-cntr">
-        <div className="hdr wdth-cvr flx-cntr flx-lft">
-            <h5 className="txt">{count} {count === 1 ? ("comment") : ("comments")}</h5>
-        </div>
-    </div>
-)
+const Desktop = ({ text, url }) => (
+    <a href={url} className="flx-cntr">
+        <text>{text}</text>
+    </a>
+);
 
-const Tablet = ({ count }) => (
-    <div></div>
-)
+const Tablet = ({ text, url }) => (
+    <a href={url} className="flx-cntr">
+        <text>{text}</text>
+    </a>
+);
 
-const Mobile = ({ count }) => (
-    <div></div>
-)
+const Mobile = ({ text, url }) => (
+    <a href={url} className="flx-cntr">
+        <text>{text}</text>
+    </a>
+);
 
-const Content = ({ comments }) => {
+const Content = ({ text, url }) => {
     const [screenSize, setScreenSize] = useState('mobile');
-    const count = comments.length;
 
     useEffect(() => {
         const handleResize = () => {
@@ -40,11 +41,11 @@ const Content = ({ comments }) => {
     }, []);
 
     if (screenSize === 'mobile') {
-        return <Mobile count={count} />;
+        return <Mobile text={text} url={url} />;
     } else if (screenSize === 'tablet') {
-        return <Tablet count={count} />;
+        return <Tablet text={text} url={url} />;
     } else {
-        return <Desktop count={count} />;
+        return <Desktop text={text} url={url} />;
     }
 };
 

@@ -1,35 +1,40 @@
 import React, { useState, useEffect } from 'react';
+import GenreListComponent from "./catalog/genre/list";
+import CatalogComponent from "./catalog/main";
+import axios from "axios";
 
-const Desktop = () => (
+const Desktop = ({genres}) => (
     <nav className="wdth-cvr flx-spc-btwn wrp">
-        <script src="%PUBLIC_URL%/static/js/catalog-button.js"></script>
-        <div className="ctlg flx-cntr">
-            <button type="button" className="hvr-2 actv-2 bdr-rds-1 flx-cntr">
-                <text>Catalog</text>
-            </button>
-        </div>
-        <div className="btns lmtd ovrfl-hdn flx-cntr">
-            <div className="btn flx-cntr">
-                <a href="/" className="hvr-1 actv-1 flx-cntr">
-                    <text>Electronics</text>
-                </a>
-            </div>
-        </div>
+        <CatalogComponent />
+        <GenreListComponent genres={genres} />
     </nav>
 );
 
-const Tablet = () => (
+const Tablet = ({genres}) => (
     <nav></nav>
 )
 
-const Mobile = () => (
+const Mobile = ({genres}) => (
     <nav></nav>
 )
 
 const Content = () => {
     const [screenSize, setScreenSize] = useState('mobile');
+    const [genres, setCategories] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
+        axios
+            .get(`/api/genres/`)
+            .then((res) => {
+                setCategories(res.data);
+                setLoading(false);
+            })
+            .catch((error) => {
+                console.error('Error fetching genres data:', error);
+                setLoading(false);
+            });
+        
         const handleResize = () => {
             if (window.innerWidth >= 1024) {
                 setScreenSize('desktop');
@@ -48,12 +53,14 @@ const Content = () => {
         };
     }, []);
 
-    if (screenSize === 'mobile') {
-        return <Mobile />;
-    } else if (screenSize === 'tablet') {
-        return <Tablet />;
-    } else {
-        return <Desktop />;
+    if (!loading) {
+        if (screenSize === 'mobile') {
+            return <Mobile genres={genres} />;
+        } else if (screenSize === 'tablet') {
+            return <Tablet genres={genres} />;
+        } else {
+            return <Desktop genres={genres} />;
+        }
     }
 };
 
